@@ -56,7 +56,7 @@ class Locations extends Component {
       <section id="locations">
         <h2 className="l-heading is-subhead is-center m-2 pt-1">Locations</h2>
         <div className="sites">
-          <div className="grid">
+          <div className="container">
             <div className="site-1">
               <h3>San Bernardino - Food Truck</h3>
               <div className="address">
