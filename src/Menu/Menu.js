@@ -6,7 +6,7 @@ const Menu = () => {
       <div className="specials">
         <h2 className="l-heading is-subhead is-center m-2 pt-1">Menu</h2>
         <h3 className="m-heading is-left mx-3 mb-1">Specials</h3>
-        <p className="is-center"><em>***All meals includes a drink***</em></p>
+        <p className="is-center"><em>***All meals include a drink***</em></p>
         <div className="grid-images">
           <figure className="item-1"><img className="special" src="https://static.wixstatic.com/media/874cb2_92384431279d471fb18fa123cc1503e4~mv2.png/v1/fill/w_443,h_673,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Mon.webp" title="3 Potato Tacos" alt="3 Potato Tacos" /></figure>
           <figure className="item-2"><img className="special" src="https://static.wixstatic.com/media/874cb2_a493cad6034147a9aa4677cc97fd03da~mv2.png/v1/fill/w_444,h_673,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Tue.webp" title="3 Street Tacos" alt="3 Street Tacos" /></figure>

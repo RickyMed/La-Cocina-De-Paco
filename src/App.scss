@@ -29,12 +29,25 @@ $fonts: (
 
 
 // Media Breakpoints
-$desktop: 1400px;
+$desktop: 1440px;
+$laptop: 1024px;
 $tablet: 550px;
 
 // Media Queries using Mixins
 @mixin tablet {
   @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
     @content;
   }
 }
@@ -47,62 +60,6 @@ $tablet: 550px;
   .header-nav {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-
-      h1 a {
-        font-family: font(bilbo);
-        font-size: 2.5rem;
-        color: color(primary);
-      }
-
-      .burger-menu {
-
-        label {
-          font-size: 1.5rem;
-          color: color(primary);
-          cursor: pointer;
-          position: relative;
-          z-index: 1;
-        }
-
-        #toggle:checked + ul {
-          display: block;
-          background-color: color(accent-two);
-          line-height: 3rem;
-        }
-
-
-        input {
-          display: none;
-        }
-
-        ul {
-          display: none;
-          width: 45vw;
-          padding-top: 3rem;
-          list-style: none;
-          position:absolute;
-          top: 0;
-          right: 0;
-
-          li {
-            width: 100%;
-            border-bottom: 1px solid color(secondary-light);
-
-            a {
-              color: color(primary);
-            }
-          }
-
-          li:last-child {
-            border: none;
-          }
-        }
-      }
-    }    
   }
 
   .header-content {
@@ -134,14 +91,14 @@ $tablet: 550px;
     h1 a {
       font-family: font(bilbo);
       font-size: 2.5rem;
-      color: color(secondary);
+      color: color(primary);
     }
 
     .burger-menu {
 
       label {
         font-size: 1.5rem;
-        color: color(secondary);
+        color: color(primary);
         cursor: pointer;
         position: relative;
         z-index: 1;
@@ -161,9 +118,9 @@ $tablet: 550px;
       ul {
         display: none;
         width: 45vw;
-        padding-top: 3rem;
         list-style: none;
         position:absolute;
+        padding-top: 3rem;
         top: 0;
         right: 0;
 
@@ -189,65 +146,116 @@ $tablet: 550px;
 #menu {
 
   .specials {
-  
+
     > h3 {
       font-family: font(bilbo);
       color: color(accent);
       border-bottom: 2px solid color(secondary);
     }
-  
+
     .grid-images {
-      display: grid;
       display: none;
-      margin: 0 3rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(10, 25vh);
-      grid-gap: 1rem;
-  
-    //   figure .special {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //   }
-  
-    //   .item-1 {
-    //     grid-column-start: 1;
-    //     grid-column-end: 3;
-    //     grid-row-start: 1;
-    //     grid-row-end: 3;
-    //   }
-  
-    //   .item-2 {
-    //     grid-column-start: 1;
-    //     grid-column-end: 3;
-    //     grid-row-start: 3;
-    //     grid-row-end: 5;
-    //   }
-  
-    //   .item-3 {
-    //     grid-column-start: 1;
-    //     grid-column-end: 3;
-    //     grid-row-start: 5;
-    //     grid-row-end: 7;
-    //   }
-  
-    //   .item-4 {
-    //     grid-column-start: 1;
-    //     grid-column-end: 3;
-    //     grid-row-start: 7;
-    //     grid-row-end: 9;
-    //   }
-  
-    //   .item-5 {
-    //     grid-column-start: 1;
-    //     grid-column-end: 3;
-    //     grid-row-start: 9;
-    //     grid-row-end: 11;
-    //   }
+
+      figure .special {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include laptop {
+        display: grid;
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: repeat(4, 25vh);
+        margin: 0 3rem;
+        grid-gap: 1rem;
+
+
+        .item-1 {
+          grid-column-start: 1;
+          grid-column-end: 8;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+    
+        .item-2 {
+          grid-column-start: 8;
+          grid-column-end: 15;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+    
+        .item-3 {
+          grid-column-start: 15;
+          grid-column-end: 22;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+    
+        .item-4 {
+          grid-column-start: 4;
+          grid-column-end: 11;
+          grid-row-start: 3;
+          grid-row-end: 5;
+        }
+    
+        .item-5 {
+          grid-column-start: 12;
+          grid-column-end: 19;
+          grid-row-start: 3;
+          grid-row-end: 5;
+        }
+      }
+
+      @include desktop() {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(4, 10vh);
+        margin: 0 3rem;
+        grid-gap: 1rem;
+
+        .item-1 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+    
+        .item-2 {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+    
+        .item-3 {
+          grid-column-start: 5;
+          grid-column-end: 7;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+    
+        .item-4 {
+          grid-column-start: 7;
+          grid-column-end: 9;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+    
+        .item-5 {
+          grid-column-start: 9;
+          grid-column-end: 11;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+      }
     }
 
     .grid-text {
       margin: 0 3rem;
+
+      @include laptop {
+        display: none;
+      }
 
       h3 {
         font-family: font(cousine);
@@ -277,9 +285,85 @@ $tablet: 550px;
       margin: 0 4rem;
 
       @include tablet {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(13, 7vh);
+
+        .item-1 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-2 {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-3 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 7;
+          grid-row-end: 9;
+        }
+
+        .item-4 {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 7;
+          grid-row-end: 9;
+        }
+
+        .item-5 {
+          grid-column-start: 1;
+          grid-column-end: 5;
+          grid-row-start: 10;
+          grid-row-end: 14;
+        }
+      }
+
+      @include laptop {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(10, 7vh);
+
+        .item-1 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-2 {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-3 {
+          grid-column-start: 5;
+          grid-column-end: 7;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-4 {
+          grid-column-start: 7;
+          grid-column-end: 9;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+
+        .item-5 {
+          grid-column-start: 3;
+          grid-column-end: 7;
+          grid-row-start: 6;
+          grid-row-end: 11;
+        }
       }
 
       .item-1,
@@ -330,6 +414,12 @@ $tablet: 550px;
         justify-content: center;
       }
 
+      @include tablet {
+        .item-5 .food-items {
+          justify-content: space-around;
+        }
+      }
+
       .item-5 {
 
         p {
@@ -357,6 +447,17 @@ $tablet: 550px;
   .container {
     margin: 0 3rem;
 
+    .site-1,
+    .site-2 {
+      display: flex;
+      flex-direction: column;
+
+      @include laptop {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
     .site-2 {
       margin-top: 1.5rem;
     }
@@ -368,6 +469,10 @@ $tablet: 550px;
     .schedule {
       display: flex;
       justify-content: space-between;
+
+      @include tablet {
+        justify-content: space-around;
+      }
 
       ul {
         list-style: none;
@@ -403,11 +508,15 @@ $tablet: 550px;
   }
 
   .contact-form {
+    display: flex;
+    justify-content: center;
     margin-right: 1rem;
 
     form {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 768px;
 
       input[type='text'],
       input[type='email'],

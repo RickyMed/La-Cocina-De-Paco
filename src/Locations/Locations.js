@@ -58,17 +58,19 @@ class Locations extends Component {
         <div className="sites">
           <div className="container">
             <div className="site-1">
-              <h3>San Bernardino - Food Truck</h3>
-              <div className="address">
-                <a className="is-link" href="maps://maps.google.com/maps?daddr=34.067435,-117.271687&amp;ll=">650 E. Hospitality Ln. Unit 10 San Bernardino, CA 92408</a>
-              </div>
-              <div className="phone-number">
-                <a className="is-link" href="tel: 951-545-8572">(951) 545-8572</a>
+              <div>
+                <h3>San Bernardino - Food Truck</h3>
+                <div className="address">
+                  <a className="is-link" href="maps://maps.google.com/maps?daddr=34.067435,-117.271687&amp;ll=">650 E. Hospitality Ln. Unit 10 San Bernardino, CA 92408</a>
+                </div>
+                <div className="phone-number">
+                  <a className="is-link" href="tel: 951-545-8572">(951) 545-8572</a>
+                </div>
               </div>
               <div>
                 <h3 className="is-center">Hours</h3>
                 <div className="schedule">
-                  <ul>
+                  <ul className="mr-3">
                     <li>Tuesday</li>
                     <li>Thrusday</li>
                   </ul>
@@ -78,21 +80,24 @@ class Locations extends Component {
                   </ul>
                 </div>
               </div>
+              
             </div>
             <div className="site-2">
-              <h3>El Monte - Restaurant</h3>
-              <div className="address">
-                <a className="is-link" href="maps://maps.google.com/maps?daddr=34.092077,-118.027566&amp;ll=">
-                  10990 Lower Azusa Rd. Ste 1 El Monte, CA 91731
-                </a>
-              </div>
-              <div className="phone-number">
-                <a className="is-link" href="tel: 626-575-7174">(626) 575-7174</a>
+              <div>
+                <h3>El Monte - Restaurant</h3>
+                <div className="address">
+                  <a className="is-link" href="maps://maps.google.com/maps?daddr=34.092077,-118.027566&amp;ll=">
+                    10990 Lower Azusa Rd. Ste 1 El Monte, CA 91731
+                  </a>
+                </div>
+                <div className="phone-number">
+                  <a className="is-link" href="tel: 626-575-7174">(626) 575-7174</a>
+                </div>
               </div>
               <div>
                 <h3 className="is-center">Hours</h3>
                 <div className="schedule">
-                  <ul>
+                  <ul className="mr-3">
                     {daysList}
                   </ul>
                   <ul>
