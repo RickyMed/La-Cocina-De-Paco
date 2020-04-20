@@ -16,11 +16,11 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-form">
-          <form>
-            <input className="form-item" type="text" placeholder="Name"/>
-            <input className="form-item" type="email" placeholder="Email"/>
-            <input className="form-item" type="text" placeholder="Subject"/>
-            <textarea className="form-item" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+          <form action="https://formspree.io/xjveqpap" method="POST">
+            <input className="form-item" type="text" name="Name" placeholder="Name"/>
+            <input className="form-item" type="email" name="Email" placeholder="Email"/>
+            <input className="form-item" type="text" name="Subject" placeholder="Subject"/>
+            <textarea className="form-item" name="Message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
             <input className="form-item btn" type="submit" value="Send"></input>
           </form>
         </div>

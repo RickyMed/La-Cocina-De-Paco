@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bilbo|Caveat:400,700|Nanum+Gothic+Coding:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 // Color Palette
 $colors: (
@@ -17,9 +18,9 @@ $colors: (
 
 // Font Stack
 $fonts: (
-  bilbo: #{'Bilbo', cursive},
-  caveat: #{'Caveat', cursive},
-  cousine: #{'Cousine', monospace}
+  comfortaa: #{'Comfortaa', cursive},
+  caveat: #{'Caveat', cursive}
+  // cousine: #{'Cousine', monospace}
 );
 
 // Font Function
@@ -29,7 +30,7 @@ $fonts: (
 
 
 // Media Breakpoints
-$desktop: 1440px;
+$desktop: 1439px;
 $laptop: 1024px;
 $tablet: 550px;
 
@@ -71,7 +72,7 @@ $tablet: 550px;
     color: color(primary);
 
     h2 {
-      font-family: font(cousine);
+      font-family: font(comfortaa);
     }
 
     p {
@@ -83,58 +84,69 @@ $tablet: 550px;
 
 // Navigation
 #main-navigation {
+
+
   
   nav {
     display: flex;
     justify-content: space-between;
 
     h1 a {
-      font-family: font(bilbo);
+      font-family: font(caveat);
       font-size: 2.5rem;
       color: color(primary);
     }
 
-    .burger-menu {
-
-      label {
-        font-size: 1.5rem;
-        color: color(primary);
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-      }
-
-      #toggle:checked + ul {
-        display: block;
-        background-color: color(accent-two);
-        line-height: 3rem;
-      }
+    // @include desktop() {
 
 
-      input {
-        display: none;
-      }
+      
+    // }
 
-      ul {
-        display: none;
-        width: 45vw;
-        list-style: none;
-        position:absolute;
-        padding-top: 3rem;
-        top: 0;
-        right: 0;
+    @include tablet {
 
-        li {
-          width: 100%;
-          border-bottom: 1px solid color(secondary-light);
+      .burger-menu {
 
-          a {
-            color: color(primary);
-          }
+        label {
+          font-size: 1.5rem;
+          color: color(primary);
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
         }
 
-        li:last-child {
-          border: none;
+        #toggle:checked + ul {
+          display: block;
+          background-color: color(accent-two);
+          line-height: 3rem;
+        }
+
+
+        input {
+          display: none;
+        }
+
+        ul {
+          display: none;
+          width: 45vw;
+          list-style: none;
+          position:absolute;
+          padding-top: 3rem;
+          top: 0;
+          right: 0;
+
+          li {
+            width: 100%;
+            border-bottom: 1px solid color(secondary-light);
+
+            a {
+              color: color(primary);
+            }
+          }
+
+          li:last-child {
+            border: none;
+          }
         }
       }
     }
@@ -144,11 +156,16 @@ $tablet: 550px;
 
 // Menu - Specials
 #menu {
+  background-color: color(accent-three);
 
   .specials {
 
+    h2 { 
+      font-family: font(caveat);
+    }
+
     > h3 {
-      font-family: font(bilbo);
+      font-family: font(comfortaa);
       color: color(accent);
       border-bottom: 2px solid color(secondary);
     }
@@ -275,10 +292,10 @@ $tablet: 550px;
 
   .menu {
 
-    > h3 {
-      font-family: font(bilbo);
+    h3 {
+      font-family: font(comfortaa);
       color: color(accent);
-      border-bottom: 2px solid color(secondary);
+      border-bottom: 1px solid color(secondary);
     }
 
     .container{
@@ -443,6 +460,11 @@ $tablet: 550px;
 
 // Locations - Food Truck
 #locations {
+  padding-bottom: 1rem;
+
+  h2 {
+    font-family: font(caveat)
+  }
 
   .container {
     margin: 0 3rem;
@@ -489,6 +511,12 @@ $tablet: 550px;
 
 // About
 #about {
+  background-color: color(accent-three);
+  padding-bottom: 1rem;
+
+  h2 {
+    font-family: font(caveat)
+  }
   
   .about-content {
 
@@ -501,7 +529,12 @@ $tablet: 550px;
 
 // Contact
 #contact {
-  margin: 0 2rem;
+
+  padding: 0 2rem;
+
+  h2 {
+    font-family: font(caveat)
+  }
 
   .contact-info .phone-number {
     margin-bottom: 0.7rem;
@@ -538,7 +571,8 @@ $tablet: 550px;
 // Careers
 
 #main-footer {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   border-top: 2px solid color(accent);
 
   .footer-nav nav ul {
@@ -551,6 +585,7 @@ $tablet: 550px;
   }
 
   hr {
+    color: color(secondary);
     margin: 0 2rem;
   }
 

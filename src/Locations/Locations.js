@@ -26,16 +26,17 @@ class Locations extends Component {
       lng: 34.067435
     };
   
-    const map = new window.google.maps.Map(document.querySelector('.map'),
-    {
-      zoom: 8,
-      center: loc
-    });
+    // const map = new window.google.maps.Map(document.querySelector('.map'),
+    // {
+    //   zoom: 8,
+    //   center: loc
+    // });
 
-    const sanBernardino = new window.google.maps.Marker({
-      position: {lat: -117.271687, lng: 34.067435},
-      map: map,
-      });
+    // eslint-disable-next-line
+    // const sanBernardino = new window.google.maps.Marker({
+    //   position: {lat: -117.271687, lng: 34.067435},
+    //   map: map,
+    //   });
   
   }
 
@@ -124,7 +125,7 @@ class Locations extends Component {
             <div className="site-12"></div>
           </div>
         </div>
-        <div className="map"></div>
+        {/* <div className="map"></div> */}
       </section>
     )
   }

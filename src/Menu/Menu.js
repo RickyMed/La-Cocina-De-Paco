@@ -5,15 +5,15 @@ const Menu = () => {
     <section id="menu">
       <div className="specials">
         <h2 className="l-heading is-subhead is-center m-2 pt-1">Menu</h2>
-        <h3 className="m-heading is-left mx-3 mb-1">Specials</h3>
-        <p className="is-center"><em>***All meals include a drink***</em></p>
-        <div className="grid-images">
+        {/* <h3 className="m-heading is-left mx-3 mb-1">Specials</h3>
+        <p className="is-center"><em>***All meals include a drink***</em></p> */}
+        {/* <div className="grid-images">
           <figure className="item-1"><img className="special" src="https://static.wixstatic.com/media/874cb2_92384431279d471fb18fa123cc1503e4~mv2.png/v1/fill/w_443,h_673,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Mon.webp" title="3 Potato Tacos" alt="3 Potato Tacos" /></figure>
           <figure className="item-2"><img className="special" src="https://static.wixstatic.com/media/874cb2_a493cad6034147a9aa4677cc97fd03da~mv2.png/v1/fill/w_444,h_673,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Tue.webp" title="3 Street Tacos" alt="3 Street Tacos" /></figure>
           <figure className="item-3"><img className="special" src="https://static.wixstatic.com/media/874cb2_9d94db6ab865451491f23226a26ec456~mv2.png/v1/fill/w_442,h_668,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Wed.webp" title="3 Fish Tacos" alt="3 Fish Tacos" /></figure>
           <figure className="item-4"><img className="special" src="https://static.wixstatic.com/media/874cb2_a005d2e72f8f4d23a1b46437f2368e6e~mv2.png/v1/fill/w_442,h_671,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Thur.webp" tile="2 Sopes" alt="2 Sopes" /></figure>
           <figure className="item-5"><img className="special" src="https://static.wixstatic.com/media/874cb2_1298a91d53aa45f2bac0194367ac6a3a~mv2.png/v1/fill/w_450,h_673,al_c,q_80,usm_0.66_1.00_0.01/Bufadora_Fri.webp" title="3 Rolled Taquitos" alt="3 Rolled Taquitos" /></figure>
-        </div>
+        </div> */}
         <div className="grid-text is-center">
           <div className="item-1">
             <div className="item-description">
@@ -55,7 +55,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="menu">
-        <h3 className="m-heading is-left mx-3 pt-1">Meals</h3>
+        {/* <h3 className="m-heading is-left mx-3 pt-1">Meals</h3> */}
         <div className="container">
           <div className="item-1">
             <h3 className="is-center">1. The Classic</h3>

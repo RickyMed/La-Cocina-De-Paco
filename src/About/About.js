@@ -7,15 +7,19 @@ const About = () => {
       <div className="about-content mx-3">
         <div className="about-img"></div>
         <div className="about-text">
-          <p>La Bufadora proudly satisfied appetites with the 
-            best authentic Mexican food. We are well known by 
-            locals for our tasty food, excellent prices, and 
-            comfort ambiance.
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore 
+             magna aliqua. Tortor at risus viverra adipiscing at in 
+             tellus integer. Quis lectus nulla at volutpat diam ut 
+             venenatis tellus in. Tempus egestas sed sed risus 
+             pretium quam. Est sit amet facilisis magna etiam tempor 
+             orci eu.
           </p>
-          <p>So whether you are working, playing, looking for 
-            a casual dinner spot, or just on the go, stop by 
-            and taste the authentic difference for yourself, 
-            you will come back for more!
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ipsum dolor sit amet consectetur adipiscing elit 
+            duis. Ac placerat vestibulum lectus mauris ultrices eros in. 
+            Sollicitudin aliquam ultrices sagittis orci a scelerisque.
           </p>
         </div>
       </div>
