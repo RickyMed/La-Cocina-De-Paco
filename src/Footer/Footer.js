@@ -15,7 +15,7 @@ const Footer = () => {
       </div>
       <hr/>
       <div className="footer-content is-center">
-        <p className="s-lead">Copyright &copy; 2020, La Bufadora Baja Grill, All Rights Reserved.</p>
+        <p className="s-lead">Copyright &copy; 2020, La Cocina De Paco, All Rights Reserved.</p>
       </div>
     </footer>
   )

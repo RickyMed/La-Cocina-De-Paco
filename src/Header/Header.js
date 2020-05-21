@@ -8,8 +8,8 @@ const Header = () => {
       <div className="header-nav">
         <Navigation></Navigation>
         <div className="header-content is-center">
-          <h2 className="m-heading">WELCOME TO LA BUFADORA BAJA GRILL</h2>
-          <p className="lead">Authentic Baja Taste</p>
+          <h2 className="m-heading">WELCOME TO LA COCINA DE PACO</h2>
+          <p className="lead">Authentic Taste</p>
         </div>
       </div>
     </header>

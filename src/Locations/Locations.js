@@ -60,24 +60,34 @@ class Locations extends Component {
           <div className="container">
             <div className="site-1">
               <div>
-                <h3>San Bernardino - Food Truck</h3>
+                <h3>Moreno Valley</h3>
+                {/* <div className="address">
+                  <a className="is-link" href="maps://maps.google.com/maps?daddr=34.067435,-117.271687&amp;ll=">12245 Hershey Ln. Moreno Valley, CA 92400</a>
+                </div> */}
+                {/* <div className="phone-number">
+                  <a className="is-link" href="tel: 951-545-8572">(951) 545-8572</a>
+                </div> */}
                 <div className="address">
-                  <a className="is-link" href="maps://maps.google.com/maps?daddr=34.067435,-117.271687&amp;ll=">650 E. Hospitality Ln. Unit 10 San Bernardino, CA 92408</a>
+                  <h4 className="is-red">12245 Hershey Ln. Moreno Valley, CA 92400</h4>
                 </div>
                 <div className="phone-number">
-                  <a className="is-link" href="tel: 951-545-8572">(951) 545-8572</a>
+                  <h4 className="is-red">(555) 555-5555</h4>
                 </div>
               </div>
               <div>
                 <h3 className="is-center">Hours</h3>
                 <div className="schedule">
                   <ul className="mr-3">
-                    <li>Tuesday</li>
-                    <li>Thrusday</li>
+                    {daysList}
                   </ul>
                   <ul>
-                    <li>10:00 am - 2:00 pm</li>
-                    <li>10:00 am - 2:00 pm</li>
+                    <li>9:00 am - 9:00 pm</li>
+                    <li>9:00 am - 9:00 pm</li>
+                    <li>9:00 am - 9:00 pm</li>
+                    <li>9:00 am - 9:00 pm</li>
+                    <li>9:00 am - 10:00 pm</li>
+                    <li>9:00 am - 10:00 pm</li>
+                    <li>9:00 am - 9:00 pm</li>
                   </ul>
                 </div>
               </div>
@@ -85,17 +95,23 @@ class Locations extends Component {
             </div>
             <div className="site-2">
               <div>
-                <h3>El Monte - Restaurant</h3>
-                <div className="address">
+                <h3>Riverside</h3>
+                {/* <div className="address">
                   <a className="is-link" href="maps://maps.google.com/maps?daddr=34.092077,-118.027566&amp;ll=">
                     10990 Lower Azusa Rd. Ste 1 El Monte, CA 91731
                   </a>
                 </div>
                 <div className="phone-number">
                   <a className="is-link" href="tel: 626-575-7174">(626) 575-7174</a>
+                </div> */}
+                <div className="address">
+                  <h4 className="is-red"> 10500 Ash Rd. Riverside, CA 92351</h4>
+                </div>
+                <div className="phone-number">
+                  <h4 className="is-red">(555) 555-5555</h4>
                 </div>
               </div>
-              <div>
+              <div className="hour-2">
                 <h3 className="is-center">Hours</h3>
                 <div className="schedule">
                   <ul className="mr-3">

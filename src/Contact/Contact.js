@@ -7,13 +7,14 @@ const Contact = () => {
       <div className="content">
         <div className="contact-info mb-2">
           <h3 className="s-heading is-left is-uppercase is-bolder">Corporate</h3>
-          <p className="is-left mr-2">2111 Atlanta Ave. Suite C102 Riverside, CA 92507</p>
+          <p className="is-left mr-2">12345 ABC Ave. Perris, CA 92570</p>
           <div className="phone-number">
-            <a className="is-link" href="tel: 951-222-2290">P. (951) 222-2290</a>
+            {/* <a className="is-link" href="tel: 951-222-2290">P. (555) 555-5555</a> */}
+            <h4 className="is-red"> (555) 555-5555</h4>
           </div>
-          <div className="fax-number">
+          {/* <div className="fax-number">
             <a className="is-link" href="tel: 951-222-2297">F. (951) 222-2297</a>
-          </div>
+          </div> */}
         </div>
         <div className="contact-form">
           <form action="https://formspree.io/xjveqpap" method="POST">
