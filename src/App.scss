@@ -84,8 +84,6 @@ $tablet: 550px;
 
 // Navigation
 #main-navigation {
-
-
   
   nav {
     display: flex;
@@ -97,56 +95,48 @@ $tablet: 550px;
       color: color(primary);
     }
 
-    // @include desktop() {
+
+    .burger-menu {
+
+      label {
+        font-size: 1.5rem;
+        color: color(primary);
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+      }
+
+      #toggle:checked + ul {
+        display: block;
+        background-color: color(accent-two);
+        line-height: 3rem;
+      }
 
 
-      
-    // }
+      input {
+        display: none;
+      }
 
-    @include tablet {
+      ul {
+        display: none;
+        width: 45vw;
+        list-style: none;
+        position:absolute;
+        padding-top: 3rem;
+        top: 0;
+        right: 0;
 
-      .burger-menu {
+        li {
+          width: 100%;
+          border-bottom: 1px solid color(secondary-light);
 
-        label {
-          font-size: 1.5rem;
-          color: color(primary);
-          cursor: pointer;
-          position: relative;
-          z-index: 1;
-        }
-
-        #toggle:checked + ul {
-          display: block;
-          background-color: color(accent-two);
-          line-height: 3rem;
-        }
-
-
-        input {
-          display: none;
-        }
-
-        ul {
-          display: none;
-          width: 45vw;
-          list-style: none;
-          position:absolute;
-          padding-top: 3rem;
-          top: 0;
-          right: 0;
-
-          li {
-            width: 100%;
-            border-bottom: 1px solid color(secondary-light);
-
-            a {
-              color: color(primary);
-            }
+          a {
+            color: color(primary);
           }
+        }
 
-          li:last-child {
-            border: none;
-          }
+        li:last-child {
+          border: none;
         }
       }
     }
@@ -576,6 +566,7 @@ $tablet: 550px;
 
 #main-footer {
   margin-top: 0.5rem;
+  margin-bottom: 6rem;
   padding-top: 0.5rem;
   border-top: 2px solid color(accent);
 

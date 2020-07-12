@@ -111,7 +111,7 @@ class Locations extends Component {
                   <h4 className="is-red">(555) 555-5555</h4>
                 </div>
               </div>
-              <div className="hour-2">
+              <div>
                 <h3 className="is-center">Hours</h3>
                 <div className="schedule">
                   <ul className="mr-3">
